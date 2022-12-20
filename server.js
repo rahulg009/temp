@@ -10,11 +10,7 @@ app.use('/bajaj/products', router)
 
 app.use(express.urlencoded({ extended: true }))
 
-const PORT = process.env.PORT || 8000
-
-
-
-
+const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
     console.log(`Hey Bajaj!! Server is running on port ${PORT}`)
