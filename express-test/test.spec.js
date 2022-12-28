@@ -17,7 +17,7 @@ describe("product", () => {
     };
   });
 
-  after(async () => {
+  afterEach(async () => {
     await Item.destroy({
       where: {},
       truncate: true,
