@@ -1,7 +1,7 @@
 module.exports = {
     HOST: 'localhost',
     USER: 'root',
-    PASSWORD: PROCESS.env.PASSWORD,
+    PASSWORD: process.env.PASSWORD,
     DB: 'bajaj_task',
     dialect: 'mysql',
 

@@ -1,17 +1,20 @@
-const express = require('express')
-const app = express()
+const express = require("express");
 
+const app = express();
 
-app.use(express.json())
+app.use(express.json());
 
-const router = require('./routes/product.router.js')
+app.use(express.urlencoded({ extended: true }));
 
-app.use('/bajaj/products', router)
+// routers
+const router = require("./routes/product.route.js");
+app.use("/bajaj/products", router);
 
-app.use(express.urlencoded({ extended: true }))
+const PORT = process.env.PORT || 8080;
 
-const PORT = process.env.PORT || 3000
+//server
+module.exports = app;
 
 app.listen(PORT, () => {
-    console.log(`Hey Bajaj!! Server is running on port ${PORT}`)
-})
+  console.log(`BFHL is running on port ${PORT}`);
+});
